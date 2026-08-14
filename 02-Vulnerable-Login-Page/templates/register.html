@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Register - Cybersecurity Lab</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="login-container">
+
+    <div class="login-card">
+
+        <div class="icon">📝</div>
+
+        <h1>Create Account</h1>
+
+        <p class="subtitle">
+            Authentication Security Laboratory
+        </p>
+
+        <form method="POST">
+
+            <label for="username">
+                Username
+            </label>
+
+            <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Create username"
+                required
+            >
+
+            <label for="password">
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Create password"
+                required
+            >
+
+            <label for="mode">
+                Storage Mode
+            </label>
+
+            <select id="mode" name="mode">
+
+                <option value="secure">
+                    Secure - Password Hashing
+                </option>
+
+                <option value="vulnerable">
+                    Vulnerable - Plain Text Storage
+                </option>
+
+            </select>
+
+            <button type="submit">
+                Create Account
+            </button>
+
+        </form>
+
+        {% if message %}
+
+        <div class="message">
+            {{ message }}
+        </div>
+
+        {% endif %}
+
+        <p class="navigation">
+            Already have an account?
+            <a href="{{ url_for('login') }}">
+                Login here
+            </a>
+        </p>
+
+        <div class="warning">
+
+            ⚠️ Educational local security laboratory
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

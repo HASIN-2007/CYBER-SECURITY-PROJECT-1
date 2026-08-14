@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Cybersecurity Lab</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="login-container">
+
+    <div class="login-card">
+
+        <div class="icon">🔐</div>
+
+        <h1>Authentication Security Lab</h1>
+
+        <p class="subtitle">
+            Vulnerable vs Secure Authentication
+        </p>
+
+        <form method="POST"
+              action="{{ url_for('login') }}">
+
+            <label for="username">
+                Username
+            </label>
+
+            <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter username"
+                required
+            >
+
+            <label for="password">
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter password"
+                required
+            >
+
+            <label for="mode">
+                Authentication Mode
+            </label>
+
+            <select id="mode" name="mode">
+
+                <option value="secure">
+                    Secure Authentication
+                </option>
+
+                <option value="vulnerable">
+                    Vulnerable Authentication
+                </option>
+
+            </select>
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+        {% if message %}
+
+        <div class="message">
+            {{ message }}
+        </div>
+
+        {% endif %}
+
+        <p class="navigation">
+
+            Don't have an account?
+
+            <a href="{{ url_for('register') }}">
+                Register here
+            </a>
+
+        </p>
+
+        <div class="warning">
+
+            ⚠️ Educational local security laboratory
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
