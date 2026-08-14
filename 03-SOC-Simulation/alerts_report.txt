@@ -1,0 +1,41 @@
+======================================================================
+              SOC INCIDENT REPORT
+======================================================================
+
+Total Alerts: 4
+
+ALERT #1
+----------------------------------------------------------------------
+Severity   : HIGH
+Type       : Unauthorized Access Attempt
+Source IP  : 198.51.100.25
+Timestamp  : 2026-08-14 09:07:31
+Details    : Resource=/admin
+
+ALERT #2
+----------------------------------------------------------------------
+Severity   : HIGH
+Type       : Unauthorized Access Attempt
+Source IP  : 198.51.100.25
+Timestamp  : 2026-08-14 09:09:44
+Details    : Resource=/admin
+
+ALERT #3
+----------------------------------------------------------------------
+Severity   : HIGH
+Type       : Possible Brute-Force Attack
+Source IP  : 203.0.113.50
+Timestamp  : 2026-08-14 09:04:21
+Details    : 5 failed login attempts detected
+
+ALERT #4
+----------------------------------------------------------------------
+Severity   : CRITICAL
+Type       : Successful Login After Failed Attempts
+Source IP  : 203.0.113.50
+Timestamp  : 2026-08-14 09:05:02
+Details    : Successful authentication occurred after repeated failed login attempts
+
+======================================================================
+SOC ANALYSIS REPORT GENERATED
+======================================================================
