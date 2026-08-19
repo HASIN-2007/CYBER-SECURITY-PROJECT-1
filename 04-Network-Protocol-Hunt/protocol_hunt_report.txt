@@ -1,0 +1,52 @@
+========================================================================
+             NETWORK PROTOCOL HUNT REPORT
+========================================================================
+
+Total traffic records analyzed: 12
+
+PROTOCOL SUMMARY
+------------------------------------------------------------------------
+DNS      | Port: 53   | Risk: LOW      | Records: 2
+FTP      | Port: 21   | Risk: HIGH     | Records: 2
+HTTP     | Port: 80   | Risk: MEDIUM   | Records: 2
+HTTPS    | Port: 443  | Risk: LOW      | Records: 2
+SMTP     | Port: 25   | Risk: MEDIUM   | Records: 1
+SSH      | Port: 22   | Risk: LOW      | Records: 2
+TELNET   | Port: 23   | Risk: CRITICAL | Records: 1
+
+SECURITY FINDINGS
+------------------------------------------------------------------------
+
+FINDING #1
+Severity     : HIGH
+Protocol     : FTP
+Source IP    : 192.168.1.20
+Destination  : 192.168.1.30
+Port         : 21
+Action       : LOGIN
+Details      : anonymous
+Risk         : File transfer protocol may transmit credentials/data in plaintext
+
+FINDING #2
+Severity     : CRITICAL
+Protocol     : TELNET
+Source IP    : 192.168.1.40
+Destination  : 192.168.1.60
+Port         : 23
+Action       : LOGIN
+Details      : legacy-device
+Risk         : Unencrypted remote access protocol
+
+FINDING #3
+Severity     : HIGH
+Protocol     : FTP
+Source IP    : 192.168.1.50
+Destination  : 192.168.1.80
+Port         : 21
+Action       : TRANSFER
+Details      : confidential.txt
+Risk         : File transfer protocol may transmit credentials/data in plaintext
+
+========================================================================
+NETWORK PROTOCOL HUNT REPORT GENERATED
+========================================================================
